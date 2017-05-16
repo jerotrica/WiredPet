@@ -1,0 +1,219 @@
+.btn-citas{
+	color: white;
+	background-color: #8904B1;
+}
+
+.btn-mama{
+	color: white;
+	background-color: #FF00FF;
+}
+
+.col-center{
+    float: none;
+    margin: 0 auto;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-log{
+	padding-top: 10px;
+	color: #A4A4A4;
+	background-color: #2E2E2E;
+}
+
+.btn-log:hover{
+color: #BDBDBD;
+background-color: #2E2E2E;
+
+}
+
+.btn-log:focus{
+	border-color: #2E2E2E;
+color: white;
+background-color: #2E2E2E;
+}
+
+.modal-title{
+	text-align: center;
+}
+
+#regAqui{
+	text-align: center;
+}
+
+
+#danger{
+    color: firebrick; 
+    background-color: lightpink;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#eventForm .form-control-feedback {
+    top: 0;
+    right: -15px;
+}
+
+#fecha{
+    border-radius: 4px;
+}
+
+.formcentrados{
+    text-align: center;
+    padding: 5px;
+}
+
+.formderecho{
+    text-align: right;
+    padding: 5px;
+}
+
+.formizquierdo{
+    text-align: left;
+    padding: 5px;
+}
+
+
+@media screen and (min-width: 300px) {
+    #adv-search {
+        width: 300px;
+        margin: 0 auto;
+        padding-top:8px;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 300px;
+    }
+}
+
+.caja-redes {
+    margin: 0 auto;
+    padding: 15px;
+    position: relative;
+}
+.caja-redes a {
+    text-align: center;
+    font-size: 20px;
+}
+.icon-button {
+    background-color: white;
+    border-radius: 30em;
+    cursor: pointer;
+    display: inline-block;
+    height: 3em;
+    line-height: 3em;
+    margin: 0 8px;
+    position: relative;
+    width: 3em;
+}
+.icon-button span {
+    border-radius: 0;
+    display: block;
+    height: 0;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 0;
+}
+.icon-button:hover span {
+    width: 3em;
+    height: 3em;
+    border-radius: 3em;
+    margin: -1.5em;
+}
+.linkedin span {
+    background-color: #4393BB;
+}
+.pinterest span {
+    background-color: #C92228;
+}
+.twitter span {
+    background-color: #4099ff;
+}
+.facebook span {
+    background-color: #3B5998;
+}
+.google-plus span {
+    background-color: #db5a3c;
+}
+/* Iconos */
+.icon-button i {
+    background: none;
+    color: white;
+    left: 0;
+    line-height: 3em;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 3em;
+    z-index: 2;
+}
+.icon-button .icon-pinterest {
+    color: #C92228;
+}
+.icon-button .icon-twitter {
+    color: #4099ff;
+}
+.icon-button .icon-facebook {
+    color: #3B5998;
+}
+.icon-button:hover .icon-linkedin, .icon-button:hover .icon-pinterest, .icon-button:hover .icon-twitter, .icon-button:hover .icon-facebook, .icon-button:hover .icon-google-plus {
+    color: white;
+}
+
+
+/*tengo problemas con los media querys para el tamaño del formulario principal/*/
+
+
+
+.navbar{
+       padding: 0px;
+    margin: 0px;
+}
+
+textarea {
+   resize: none;
+}
+
+.img-rounded:hover{
+    background-color: #CAC9C9;
+}
+
+#imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+
+#profile-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#profile-container img {
+    width: 150px;
+    height: 150px;
+}
