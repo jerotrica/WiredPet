@@ -1,0 +1,24 @@
+create database wiredPet;
+use wiredPet;
+
+drop table usuarios;
+
+CREATE TABLE usuarios (
+    idUSUARIOS INT unique NOT NULL AUTO_INCREMENT,
+    Nombre VARCHAR(45),
+    Apellido VARCHAR(45),
+    Coordenadas VARCHAR(45),
+    Mail VARCHAR(45),
+    Telefono VARCHAR(45),
+    Sexo VARCHAR(45),
+    FechaNac VARCHAR(45),
+    Domicilio VARCHAR(45)
+)
+;
+
+select * from usuarios;
+
+insert into usuarios (Nombre)values('daniel');
+
+insert into usuarios (Nombre,Apellido,Coordenadas,Mail,Telefono,Sexo,FechaNac,Domicilio)
+		values('marta','perez','106548','mperez@mail.com','7554864','f','10011975','calle uno nro 1654 bsas')
