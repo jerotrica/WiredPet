@@ -1,0 +1,133 @@
+LARAVEL  (UN LIBRO DE INTRODUCCION A LARAVEL --> https://www.gitbook.com/book/richos/laravel-5/details)
+
+
+- es modelo vista controlador MVC
+
+*modelo de negocios
+*controladores tienen la logica
+*vistas la representacion
+
+->los tres se relacionan de una manera
+
+
+			
+								/----------------modelo<-------->BBDD
+			ruta---->controlador					|
+												   \|/
+													|
+								\----------------vista
+
+
+- es orientado a objetoS
+
+antes que nada tiene que estar instalado y corriendo LAMP
+
+HAY QUE BAJARLO DE INTERNET Y DESZIPEAR LA CARPETA EN UNA CARPETA DENTRO DE HTDOCS
+TAMBIEN HAY QUE INSTALAR EL COMOPOSER (https://getcomposer.org/)
+EL COMPOSER INSTALA TODAS LAS DEPENDENCIAS (SON CLASES DE TERCEROS) SERIA MUY ENGORROSO INSTALARLAS MANUALMENTE
+EL COMPOSER SOLUCIONA ESTO
+
+
+- EN LA LINEA DE COMANDOS CON COMPOSER SE PUEDE INSTALAR LARAVEL DESDE CERO
+
+CARPETAS Y ARCHIVOS MAS IMPORTANTES MAS IMPORTANTES:
+
+.env configuracion de las BBDD
+
+-------------------------------------------------------------------------------------------------
+ARTISAN aplicacion de laravel que ayuda a crear modelos vistas y controladores
+
+"C:\XAMPP\php\PHP artisan migrate" (en la consola de comandos ejecutara las 
+
+clases programadas en "database/migrations"
+
+con esto se sincronizan la bbdd cuando mas de un programador esta craeando o modificando bases
+-----------------------------------------------------------------------------------------------
+CARPETA "ROUTES"
+
+EN EL ARCHIVO "WEB.PHP" SE DECLARAN LAS RUTAS PERMITIDAS PARA EL SITIO
+
+
+--------------------------------------------------------------------------------------------
+EN LA CARPETA "/APP/HTTP/CONTROLLERS/"
+
+VAN A IR LOS CONTROLADORES
+TODOS HEREDARAN DE LA CLASE CONTROLLER (ARCHIVO "CONTROLLER.PHP") QUE A SU VEZ HEREDA DE BASEcONTROLLER
+
+con artisan en la consola de comandos:
+
+"C:\XAMPP\php\PHP artisan make:controller CinemaController" para crear un controlador desde artisan.
+
+--------------------------------------------------------------------------------------------
+
+EN LA CARPETA "/resourses/views"
+
+ahi estan las vistas
+
+
+--------------------------------------------------------------------------------------
+CARPETA "APP/" ahi suekto se crean los modelos
+
+
+CARPETA "APP/USER.PHP" SE CREA POR DEFECTO CUANDO INSTALA LARAVEL
+
+ADEMAS CREA LA TABLA USUARIOS Y LA TABLA MIGRACIONES ENTRE OTRAS COSAS
+
+COMO EL MODELO ES UNA INTERFAZE ENTRE EL CONTROLADOR Y LAS TABLAS DE LA BASE
+
+SE PUEDE hacer un modelo por cada tabla
+
+hay que conocer los modelos de laravel ya que este esta configurado todo a su manera.
+
+Por ejemplo, laravel crea por defecto la tabla USERS y alli deposita la info de los usuarios de un sitio
+
+esto hay que saberlo para que no haya inconsistencias entre el modelo por defecto y el que se esta creando
+
+En este caso habria que ir al modelo user para avisar que la tabla donde se guarden los datos de los usuarios
+es una diferente de USERS
+
+en la linea de comandos: "C:\XAMPP\php\PHP artisan make:model Prueba" para crear un modelo. este se alojara en la carpeta "app/"
+
+C:\XAMPP\php\PHP artisan make:migration createTablePrueba
+---------------------------------------------------------------------------------
+
+convenciones de LARAVEL
+
+- los nombres de las tablas van en plural
+- los nombres de los modelos son en singular
+
+
+
+
+======================codigo en el archivo web.php=======================
+
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/', 'CinemaController@index')//ejemplo del profe
+
+
+
+Route::get('/comentarios', function () {
+    return view('reviews');
+});
+
+
+
+
+
+
