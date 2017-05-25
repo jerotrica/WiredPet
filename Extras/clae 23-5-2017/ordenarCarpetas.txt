@@ -1,0 +1,41 @@
+Nombre de las carpetas 
+	VISTAS (todos los html) 
+	CSS
+	JS
+	IMG (Imagenes del sitio)
+	CONFIG (carpeta con todas las configuraciones)
+	MODELO (todos los php, logica de negocios, que represente al negocio)
+	HELPERS/INCLUDES (
+	CONTROLADORES (
+	RECURSOS (va la carpeta vid,img,docs)
+	LOG (
+	
+
+------------------------------------------------
+
+	
+	config (los archivso de configuracion INI
+	controladores ( va a llamar al modelo y pasar los datos a la vista)
+	helpers (clases que nos van a ayudar a hacer algo y no son logica de negocios)
+	logs 
+	modelo (podriamos separar carpetas para los modulos de cada ambito de negocios)
+	recursos
+	temp 
+	vista (aca entra la carpeta template, con las partes que se repiten 
+		y tambien las carpetas de CSS JS, HTML, IMG) 
+
+
+---------------------------------------------------
+codeignater
+
+	cache ( guarda en ememoria los procesamientos de pagians2
+	config (tiene todas las configuraciones, codeginater lo usa en php)
+	controllers (controladores, 
+	views (guarda las vistas
+	models( guarda el modelo de negocio
+	core (logica del framework, no se usa pero si no esta ahi no funciona
+	logs ( logs de la aplicacoines)
+	third_party ( lo que aporto terceros)	
+------------------------------------------------------------------------
+
+	

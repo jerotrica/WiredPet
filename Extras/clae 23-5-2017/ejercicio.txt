@@ -1,0 +1,15 @@
+estructura carpetas basado en lo caharlado en clase o un framework
+
+config config.ini  
+
+helpers config (que va a levantar esto)
+helpers	database
+
+html head
+html fotter
+
+index.php
+
+
+
+generate data

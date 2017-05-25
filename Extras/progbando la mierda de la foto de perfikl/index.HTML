@@ -20,8 +20,24 @@
   </style>
 </head>
 <body>
+<script>
+  $("#image").change(function(){
+          readURL(this);
+          //other uploading proccess [server side by ajax and form-data ]
+      });
 
+  function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
 
+              reader.onload = function (e) {
+                  $('#profile').attr('src', e.target.result);
+              }
+
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+  </script>
 <div class="signup-w3ls">   
     <div class="signup-agile1">
      <img height="100" width="100" id="profile" src="http://santetotal.com/wp-content/uploads/2014/05/default-user.png" alt="profile-image" />

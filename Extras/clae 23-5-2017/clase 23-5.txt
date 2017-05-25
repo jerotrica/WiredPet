@@ -1,0 +1,32 @@
+session_start()		//siempre con eso cargar el modulo de sesiones
+
+if(!isset($_session['login'])    //verificar primero la existencia de la variable
+	if(validacion del login)
+	echo("jasdlja");
+
+header ("locationindex.php");
+
+
+Esto es lo pirmero que tiene que hacer la pagina cuando entradas
+
+pones todo le codigo en un php aparte, y le pones un required("seguridad.php")
+
+requiere =! include; 
+
+
+$DB = New BaseDeDatos();
+
+$CON = $DB->conectar();
+
+$CON = BaseDeDatos::conectar();
+
+para que ande ese tipo de llamado de metodo tiene que estar llamado como public static
+ejemplo  public static conectar();
+
+no esta muy bueno usarlo asi. 
+
+
+-----------------------------------------
+
+crear objeto usuario 
+chquear que todos los atributos esten ien 
