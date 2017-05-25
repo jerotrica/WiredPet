@@ -48,10 +48,10 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Noticias</a></li>
-        <li><a href="citas.HTML">Citas</a></li>
-        <li><a href="adoptar.HTML">Adoptar</a></li>
-        <li><a href="futuraMama.HTML">Futura Mama</a></li>
+        <li ><a href="miCuenta.HTML">Noticias</a></li>
+        <li ><a href="citas.HTML">Citas</a></li>
+        <li ><a href="adoptar.HTML">Adoptar</a></li>
+        <li class="active"><a href="futuraMama.HTML">Futura Mama</a></li>
       </ul>
 
 
@@ -68,18 +68,17 @@
   <div class="row">
     <div class="col-sm-3 well">
       <div class="well">
-        <h2>Firulais</h2>
-        <img src="img/bird.jpg" id="imagen" class="img-rounded" height="165" width="165" alt="Avatar">
+        <h2>Pasita</h2>
+        <img src="img/pasita.jpg" id="imagen" class="img-rounded" height="165" width="165" alt="Avatar">
         <p>Macho</p>
         <p>Labrador</p>
-        <p>Mediano</p>
+        <p>Grande</p>
         
         
         
         <br><br>
         <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.5102862598146!2d-58.56770328514765!3d-34.641813767020956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7e57b8bd27d%3A0xa43c50d08458702!2sAv.+de+Mayo+100%2C+B1704BUO+Ramos+Mej%C3%ADa%2C+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1493915644651" width="150" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
         <br><br>
-        <span class="label label-primary">Seguir a Firulais</span>
 
       </div>
 
@@ -87,7 +86,7 @@
                 <br><br>
                 <div class="bg-primary">
 
-                    <h4>Firulais en la red</h4>
+                    <h4>Pasita en la red</h4>
 
                     <img src="img/barras.jpg" class="img-rounded" height="155" width="155" alt="Avatar">
 
@@ -104,7 +103,7 @@
               <!--<p contenteditable="true">Status: Feeling Blue</p>-->
               <form>
                   <div class="form-group">
-                    <label  for="comment">Haz una publicacion</label>
+                    <label  for="comment">Publica los futuros cachorros de tu mascota</label>
                       <textarea class="form-control" rows="5" id="comment"></textarea>
                   </div>
               </form>
@@ -120,69 +119,96 @@
           </div>
         </div>
       </div>
+
       
       <div class="row">
+        <div class="input-group" id="adv-search">
+                <input type="text" class="form-control" placeholder="Filtra la busqueda de mascota" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                  <div class="form-group">
+                                    <label for="filter">Filtrar por</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>Zona Norte</option>
+                                        <option value="1">Zona Sur</option>
+                                        <option value="2">Zona Oeste</option>
+                                        <option value="3">Capital Federal</option>
+                                        <option value="4">Interior de Bs. As.</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="contain">Que contenga las palabras</label>
+                                    <input class="form-control" type="text" />
+                                  </div>
+                                  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                </form>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+            </div>
+      </div>
+
+
+      <div class="row ">
         <div class="col-sm-3">
           <div class="well">
-           <p>Bugs Bunny</p>
-           <img src="img/conejo.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+           <h4>Juancho</h4>
+           <img src="img/bandmember.jpg" class="img-circle" height="85" width="85" alt="Avatar">
+
           </div>
         </div>
         <div class="col-sm-9">
           <div class="well">
-                <video  controls>
-                    <source src="vid/mov_bbb.mp4" type="video/mp4">
-                </video>
-          </div>
-        </div>
-      </div>
-      <div class="row ">
-        <div class="col-sm-3 ">
-          <div class="well">
-           <p>Juancho</p>
-           <img src="img/bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-          </div>
-        </div>
-        <div class="col-sm-9 ">
-          <div class="well">
-                <span class="glyphicon glyphicon-heart"></span>
-               <p>Juancho hizo una cita con Princesa</p>
-               <div>
-                 
-                <img src="img/bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-                 <img src="img/corazon.png" class="img-circle" height="55" width="55" alt="Avatar">
-                 <img src="img/princesa.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-               </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                      <h4>Ofrece</h4>
+                  </div>
+                  <div class="col-sm-5" align="left">
+                      <h4><small>Labrador</small>  <small>macho</small>  <small>pequeño</small></h4>
+                  </div>
+                  <div class="col-sm-4 label label-info" align="left">
+                      <h4>Zona Oeste</h4>
+                  </div>
+                </div>
+               <p>Uno, dos o tres cachorros muy buenos.. .blablabla.... estan en la zona del Don Bosco Ramos Mejia</p>
+               <div class="product-image"> 
+                <div id="myCarousel-2" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel-2" data-slide-to="0" class=""></li>
+                  <li data-target="#myCarousel-2" data-slide-to="1" class="active"></li>
+                  <li data-target="#myCarousel-2" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                  <!-- Slide 1 -->
+                  <div class="item active">
+                    <img src="img/futuramama1.jpg" class="img-rounded" width="100%" height="100%" alt="">
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="item">
+                    <img src="img/futuramama2.jpg" class="img-rounded" width="100%" height="100%" alt="">
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="item">
+                    <img src="img/futuramama3.jpg" class="img-rounded" width="100%" height="100%" alt="">
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel-2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+                <a class="right carousel-control" href="#myCarousel-2" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+                </div>
+              </div>
+              <br>
+              <button type="button" class="btn btn-success">Contactar</button>
 
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>Mauricio</p>
-           <img src="img/animal.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>Bestia</p>
-           <img src="img/otroanimal.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>     
+
     </div>
     <div class="col-sm-2 well">
       <!--<div class="thumbnail">
