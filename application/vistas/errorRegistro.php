@@ -38,7 +38,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="index.HTML">WiredPet</a>
+      <a class="navbar-brand" href="index.php">WiredPet</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <!--<ul class="nav navbar-nav">
@@ -88,7 +88,7 @@
   </form>
         </div>
         <div class="modal-footer">
-          <p>Si no tienes una cuenta registrate <a href="registro.HTML">aqui</a></p>
+          <p>Si no tienes una cuenta registrate <a href="registro.php">aqui</a></p>
         </div>
       </div>
       
@@ -99,16 +99,15 @@
 <div class="col-center container text-center">    
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3 well">
+    <div class="alert alert-success" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Success!</strong> You have been signed in successfully!
+</div>
             <script>window.setTimeout(function() {
                     $(".alert").fadeTo(500, 0).slideUp(500, function(){
                     $(this).remove(); 
-                    }); }, 2400);
+                    }); }, 4000);
             </script>
-    <div class="bs-example">
-          <div class="alert alert-danger">
-            <span class="close" data-dismiss="alert">&times;</span>
-            <strong>Error!</strong> Los datos que ingresaste no son correctos.</div>
-        </div>
       <div class="well">
           <h1 id="nombreLogo">WiredPet</h1>
           <br>

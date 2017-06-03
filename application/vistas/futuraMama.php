@@ -1,3 +1,4 @@
+<?php   include '../helpers/sesion.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,21 +44,21 @@
           <span class="icon-bar"></span>                        
         </button>
         
-        <a class="navbar-brand" href="index.HTML">WiredPet</a>
+        <a class="navbar-brand" href="index.php">WiredPet</a>
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li ><a href="miCuenta.HTML">Noticias</a></li>
-        <li ><a href="citas.HTML">Citas</a></li>
-        <li class="active"><a href="adoptar.HTML">Adoptar</a></li>
-        <li><a href="futuraMama.HTML">Futura Mama</a></li>
+        <li ><a href="miCuenta.php">Noticias</a></li>
+        <li ><a href="citas.php">Citas</a></li>
+        <li ><a href="adoptar.php">Adoptar</a></li>
+        <li class="active"><a href="futuraMama.php">Futura Mama</a></li>
       </ul>
 
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Configurar</a></li>
-        <li><a href="index.HTML"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+        <li><a href="../helpers/sesionOut.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
       </ul>
 
     </div>
@@ -103,7 +104,7 @@
               <!--<p contenteditable="true">Status: Feeling Blue</p>-->
               <form>
                   <div class="form-group">
-                    <label  for="comment">No abandones, pone en adopcion!</label>
+                    <label  for="comment">Publica los futuros cachorros de tu mascota</label>
                       <textarea class="form-control" rows="5" id="comment"></textarea>
                   </div>
               </form>
@@ -187,15 +188,15 @@
                 <div class="carousel-inner">
                   <!-- Slide 1 -->
                   <div class="item active">
-                    <img src="img/pasita3.jpg" class="img-rounded" width="100%" height="100%" alt="">
+                    <img src="img/futuramama1.jpg" class="img-rounded" width="100%" height="100%" alt="">
                   </div>
                   <!-- Slide 2 -->
                   <div class="item">
-                    <img src="img/pasita2.jpg" class="img-rounded" width="100%" height="100%" alt="">
+                    <img src="img/futuramama2.jpg" class="img-rounded" width="100%" height="100%" alt="">
                   </div>
                   <!-- Slide 3 -->
                   <div class="item">
-                    <img src="img/pasita1.jpg" class="img-rounded" width="100%" height="100%" alt="">
+                    <img src="img/futuramama3.jpg" class="img-rounded" width="100%" height="100%" alt="">
                   </div>
                 </div>
                 <a class="left carousel-control" href="#myCarousel-2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
@@ -209,170 +210,6 @@
         </div>
       </div>
 
-
-<div class="row ">
-        <div class="col-sm-3">
-          <div class="well">
-           <h4>Juancho</h4>
-           <img src="img/bandmember.jpg" class="img-circle" height="85" width="85" alt="Avatar">
-
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-                <div class="row">
-                  <div class="col-sm-3">
-                      <h4>Ofrece</h4>
-                  </div>
-                  <div class="col-sm-5" align="left">
-                      <h4><small>Labrador</small>  <small>macho</small>  <small>pequeño</small></h4>
-                  </div>
-                  <div class="col-sm-4 label label-info" align="left">
-                      <h4>Zona Oeste</h4>
-                  </div>
-                </div>
-               <p>Uno, dos o tres cachorros muy buenos.. .blablabla.... estan en la zona del Don Bosco Ramos Mejia</p>
-               <div class="product-image"> 
-                <div id="myCarousel-2" class="carousel slide">
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel-2" data-slide-to="0" class=""></li>
-                  <li data-target="#myCarousel-2" data-slide-to="1" class="active"></li>
-                  <li data-target="#myCarousel-2" data-slide-to="2" class=""></li>
-                </ol>
-                <div class="carousel-inner">
-                  <!-- Slide 1 -->
-                  <div class="item active">
-                    <img src="img/pasita3.jpg" class="img-rounded" width="100%" height="100%" alt="">
-                  </div>
-                  <!-- Slide 2 -->
-                  <div class="item">
-                    <img src="img/pasita2.jpg" class="img-rounded" width="100%" height="100%" alt="">
-                  </div>
-                  <!-- Slide 3 -->
-                  <div class="item">
-                    <img src="img/pasita1.jpg" class="img-rounded" width="100%" height="100%" alt="">
-                  </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel-2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
-                <a class="right carousel-control" href="#myCarousel-2" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
-                </div>
-              </div>
-              <br>
-              <button type="button" class="btn btn-success">Contactar</button>
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row ">
-        <div class="col-sm-3">
-          <div class="well">
-           <h4>Juancho</h4>
-           <img src="img/bandmember.jpg" class="img-circle" height="85" width="85" alt="Avatar">
-
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-                <div class="row">
-                  <div class="col-sm-3">
-                      <h4>Ofrece</h4>
-                  </div>
-                  <div class="col-sm-5" align="left">
-                      <h4><small>Labrador</small>  <small>macho</small>  <small>pequeño</small></h4>
-                  </div>
-                  <div class="col-sm-4 label label-info" align="left">
-                      <h4>Zona Oeste</h4>
-                  </div>
-                </div>
-               <p>Uno, dos o tres cachorros muy buenos.. .blablabla.... estan en la zona del Don Bosco Ramos Mejia</p>
-               <div class="product-image"> 
-                <div id="myCarousel-2" class="carousel slide">
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel-2" data-slide-to="0" class=""></li>
-                  <li data-target="#myCarousel-2" data-slide-to="1" class="active"></li>
-                  <li data-target="#myCarousel-2" data-slide-to="2" class=""></li>
-                </ol>
-                <div class="carousel-inner">
-                  <!-- Slide 1 -->
-                  <div class="item active">
-                    <img src="img/pasita3.jpg" class="img-rounded" width="100%" height="100%" alt="">
-                  </div>
-                  <!-- Slide 2 -->
-                  <div class="item">
-                    <img src="img/pasita2.jpg" class="img-rounded" width="100%" height="100%" alt="">
-                  </div>
-                  <!-- Slide 3 -->
-                  <div class="item">
-                    <img src="img/pasita1.jpg" class="img-rounded" width="100%" height="100%" alt="">
-                  </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel-2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
-                <a class="right carousel-control" href="#myCarousel-2" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
-                </div>
-              </div>
-              <br>
-              <button type="button" class="btn btn-success">Contactar</button>
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row ">
-        <div class="col-sm-3">
-          <div class="well">
-           <h4>Juancho</h4>
-           <img src="img/bandmember.jpg" class="img-circle" height="85" width="85" alt="Avatar">
-
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-                <div class="row">
-                  <div class="col-sm-3">
-                      <h4>Ofrece</h4>
-                  </div>
-                  <div class="col-sm-5" align="left">
-                      <h4><small>Labrador</small>  <small>macho</small>  <small>pequeño</small></h4>
-                  </div>
-                  <div class="col-sm-4 label label-info" align="left">
-                      <h4>Zona Oeste</h4>
-                  </div>
-                </div>
-               <p>Uno, dos o tres cachorros muy buenos.. .blablabla.... estan en la zona del Don Bosco Ramos Mejia</p>
-               <div class="product-image"> 
-                <div id="myCarousel-2" class="carousel slide">
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel-2" data-slide-to="0" class=""></li>
-                  <li data-target="#myCarousel-2" data-slide-to="1" class="active"></li>
-                  <li data-target="#myCarousel-2" data-slide-to="2" class=""></li>
-                </ol>
-                <div class="carousel-inner">
-                  <!-- Slide 1 -->
-                  <div class="item active">
-                    <img src="img/pasita3.jpg" class="img-rounded" width="100%" height="100%" alt="">
-                  </div>
-                  <!-- Slide 2 -->
-                  <div class="item">
-                    <img src="img/pasita2.jpg" class="img-rounded" width="100%" height="100%" alt="">
-                  </div>
-                  <!-- Slide 3 -->
-                  <div class="item">
-                    <img src="img/pasita1.jpg" class="img-rounded" width="100%" height="100%" alt="">
-                  </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel-2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
-                <a class="right carousel-control" href="#myCarousel-2" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
-                </div>
-              </div>
-              <br>
-              <button type="button" class="btn btn-success">Contactar</button>
-
-          </div>
-        </div>
-      </div>
     </div>
     <div class="col-sm-2 well">
       <!--<div class="thumbnail">

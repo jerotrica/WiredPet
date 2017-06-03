@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 echo "hola login";
 
 require "../../modelo/bbdd/consulta.php";
@@ -43,12 +41,12 @@ require "../../modelo/bbdd/consulta.php";
 		}
 		}
 		if(validarlogin()){
-			
-				$_SESSION['nick'] = 1;	
-				header("Location:../../vistas/miCuenta.html"); // si el select devuelve un row se inincia sesion y se pasa a "logueado.php"
+				session_start();
+				$_SESSION["autentic"] = true;	
+				header("Location:../../vistas/miCuenta.php"); // si el select devuelve un row se inincia sesion y se pasa a "logueado.php"
 				
 			}else{
-					header("Location:../../vistas/errorLogin.html");// si no se pasa a una pagina que informa del problema
+					header("Location:../../vistas/errorLogin.php");// si no se pasa a una pagina que informa del problema
 					session_destroy();
 			}
 

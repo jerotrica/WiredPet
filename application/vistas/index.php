@@ -38,7 +38,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="index.HTML">WiredPet</a>
+      <a class="navbar-brand" href="#">WiredPet</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <!--<ul class="nav navbar-nav">
@@ -67,7 +67,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
-          
+          <h4 class="modal-title">Inicia sesion en WiredPet</h4>
         </div>
         <div class="modal-body">
             <form method="POST" action="../controladores/miCuenta/login.php">
@@ -88,7 +88,7 @@
   </form>
         </div>
         <div class="modal-footer">
-          <p>Si no tienes una cuenta registrate <a href="registro.HTML">aqui</a></p>
+          <p>Si no tienes una cuenta registrate <a href="registro.php">aqui</a></p>
         </div>
       </div>
       
@@ -99,41 +99,22 @@
 <div class="col-center container text-center">    
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3 well">
-    <div class="alert alert-success" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Success!</strong> You have been signed in successfully!
-</div>
-            <script>window.setTimeout(function() {
-                    $(".alert").fadeTo(500, 0).slideUp(500, function(){
-                    $(this).remove(); 
-                    }); }, 4000);
-            </script>
       <div class="well">
-          <h1 id="nombreLogo">WiredPet</h1>
-          <br>
-          <p>Ingresa nuevamente tu usuario y contraseña.</p>
-          <form method="POST" action="../controladores/miCuenta/login.php">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input id="user" type="text" class="form-control" name="user" placeholder="Usuario">
-            </div>
-            <br>
-            <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-              <input id="password" type="password" class="form-control" name="password" placeholder="Password">
-            </div>
-            <br>
-              <button type="submit"  class="btn btn-success btn-block" >Iniciar sesion</button>
-            <br>
-          </form>
-      </div>
-    </div>
-</div>
-      </div>
-    </div>
-  </div>
-</div>
+        <h1 id="nombreLogo">WiredPet</h1>
+        <img src="img/logo.png" class="img" id="" width="100%" height="100%" alt="">
+                <a href="registro.php" role="button" class="btn btn-success btn-block " href="#">Crea Tu Cuenta</a>
+                <br>
+                <p>o utiliza una de estas opciones:</p>
+                <br>
+                <button type="button" class="btn btn-primary btn-block">Facebook</button>
+                <button type="button" class="btn btn-danger btn-block">Google+</button>
+                
+        
 
+</div>
+</div>
+</div>
+</div>
 <footer class=" text-center">
   <div class="caja-redes">
      <a href="https://twitter.com/" target="_blank" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>

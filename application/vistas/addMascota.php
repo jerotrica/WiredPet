@@ -1,3 +1,5 @@
+<?php   include '../helpers/sesion.php';?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,7 +50,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="index.HTML">WiredPet</a>
+      <a class="navbar-brand" href="index.php">WiredPet</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">  
       <ul class="nav navbar-nav navbar-right">
@@ -67,7 +69,7 @@
   <div class="container-fluid">
     <h1 class="formcentrados">Agrega <small>a tu mascota </small></h1>
     
-      <form action="index.html" name="myForm" class="form-inline">
+      <form action="index.php" name="myForm" class="form-inline">
         <div class="row formcentrados">
 
           <div class="col-sm-12 formcentrados">
@@ -138,7 +140,7 @@
           <br><br>
           <div class="col-sm-12 formcentrados"><br><br>
                 <button type="submit" class="btn btn-success">Añadir Mascota</button>
-                <button type="miCuenta.HTML" action="miCuenta.HTML" class="btn btn-info">Quiero Adoptar</button>
+                <button type="miCuenta.php" action="miCuenta.php" class="btn btn-info">Quiero Adoptar</button>
           </div>
 
          </div>
@@ -160,7 +162,7 @@
           <h4 class="modal-title">Inicia sesion en WiredPet</h4>
         </div>
         <div class="modal-body">
-            <form action="miCuenta.HTML">
+            <form action="miCuenta.php">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
       <input id="email" type="text" class="form-control" name="email" placeholder="Email">
@@ -178,7 +180,7 @@
   </form>
         </div>
         <div class="modal-footer">
-          <p>Si no tienes una cuenta registrate <a href="registro.HTML">aqui</a></p>
+          <p>Si no tienes una cuenta registrate <a href="registro.php">aqui</a></p>
         </div>
       </div>
       

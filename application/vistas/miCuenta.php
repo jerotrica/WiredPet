@@ -1,3 +1,5 @@
+<?php   include '../helpers/sesion.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,21 +45,21 @@
           <span class="icon-bar"></span>                        
         </button>
         
-        <a class="navbar-brand" href="index.HTML">WiredPet</a>
+        <a class="navbar-brand" href="index.php">WiredPet</a>
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Noticias</a></li>
-        <li><a href="citas.HTML">Citas</a></li>
-        <li><a href="adoptar.HTML">Adoptar</a></li>
-        <li><a href="futuraMama.HTML">Futura Mama</a></li>
+        <li><a href="citas.php">Citas</a></li>
+        <li><a href="adoptar.php">Adoptar</a></li>
+        <li><a href="futuraMama.php">Futura Mama</a></li>
       </ul>
 
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Configurar</a></li>
-        <li><a href="index.HTML"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+        <li><a href="../helpers/sesionOut.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
       </ul>
 
     </div>
