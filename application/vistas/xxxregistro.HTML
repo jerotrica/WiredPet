@@ -62,72 +62,57 @@
   </div>
 </nav>
 
-<br>
-<div class="col-center container text-center">   
-<div class="col-sm-6 col-sm-offset-3 well">
-<!--<div class="container-fluid">-->
 
-  
+<div class="well">
+  <div class="container-fluid">
     <h2 class="formcentrados">Registrate <small>para comenzar </small></h2>
-    
-      <form  name="myForm" method="POST" action="../controladores/registro/proceso_registro.php" class="form-horizontal">
-        <div class="row formcentrados ">
-          
-
-                <input name="nombre" ng-model="nombre" type="text" class="form-control" id="inlineFormInput" placeholder="Nombre"  required>
-                <span ng-show="myForm.nombre.$touched && myForm.nombre.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Nombre"</span>
-                <br>
-                <input name="apellido" ng-model="apellido"  type="text" class="form-control" id="inlineFormInput" placeholder="Apellido" required>
-                <span ng-show="myForm.apellido.$touched && myForm.apellido.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Apellido"</span>
-
-                <br>
+    <br>
+      <form action="index.html" name="myForm" class="form-inline">
+        <div class="row formcentrados">
+          <div class="col-sm-12 formcentrados">
+                <input name="myName" ng-model="myName" type="text" class="form-control" id="inlineFormInput" placeholder="Nombre"  required>
+                <span ng-show="myForm.myName.$touched && myForm.myName.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Nombre"</span>
+            
+                <input name="myApe" ng-model="myApe"  type="text" class="form-control" id="inlineFormInput" placeholder="Apellido" required>
+                <span ng-show="myForm.myApe.$touched && myForm.myApe.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Apellido"</span>
 
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                 <div class="input-group-addon">@</div>
-                <input name="usuario" ng-model="usuario" type="text" class="form-control" id="inlineFormInputGroup" placeholder="Nombre de Usuario" required>
+                <input name="myUser" ng-model="myUser" type="text" class="form-control" id="inlineFormInputGroup" placeholder="Nombre de Usuario" required>
                 </div>
-                <span ng-show="myForm.usuario.$touched && myForm.usuario.$invalid"id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> </span> Falta "Nombre de Usuario"</span>
-                <br>
-                <input name="clave" ng-model="clave" type="password" class="form-control" id="inlineFormInputGroup" placeholder="Clave" required>
-                
-                <span ng-show="myForm.clave.$touched && myForm.clave.$invalid"id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> </span> Falta "Clave"</span>
+                <span ng-show="myForm.myUser.$touched && myForm.myUser.$invalid"id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> </span> Falta "Nombre de Usuario"</span>
           
-                <br>
-                <input name="fecha" ng-model="fecha" type="text" id="fecha" name="fecha" class="form-control" placeholder="Fecha de Nacimiento" required >
-                <span ng-show="myForm.fecha.$touched && myForm.fecha.$invalid"id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> </span> Falta "Fecha Nacimiento"</span>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0 ">
+                <input name="myDate" ng-model="myDate" type="text" id="fecha" name="fecha" class="form-control" placeholder="Fecha de Nacimiento" required >
+                </div><span ng-show="myForm.myDate.$touched && myForm.myDate.$invalid"id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> </span> Falta "Fecha Nacimiento"</span>
+          </div>
+          <div class="col-sm-12 formcentrados">
+                <input name="myTel" ng-model="myTel" type="tel" class="form-control" id="inlineFormInput" placeholder="Telefono"  required>
+                <span ng-show="myForm.myTel.$touched && myForm.myTel.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Telefono"</span>
 
-                <br>
-                <input name="telefono" ng-model="telefono" type="tel" class="form-control" id="inlineFormInput" placeholder="Telefono"  required>
-                <span ng-show="myForm.telefono.$touched && myForm.telefono.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Telefono"</span>
-                <br>
-                <input name="domicilio" ng-model="domicilio" type="text" class="form-control" id="inlineFormInput" placeholder="Domicilio"  required>
-                <span ng-show="myForm.domicilio.$touched && myForm.domicilio.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Domicilio"</span>
-                <br>
-                <input name="mail" ng-model="mail" type="email" class="form-control" id="inlineFormInput" placeholder="Mail"  required>
-                <span ng-show="myForm.mail.$touched && myForm.mail.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Mail"</span>
-
-                
-                <br>
-                  
-                  <select class="form-control " id="sel1" name="sexo">
-                      <option value="vacio">Sexo</option>
-                      <option value="Masculino">Masculino</option>
-                      <option value="Femenino">Femenino</option>
-                  </select><span ng-show="myForm.sexo.$touched && myForm.sexo.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Mail"</span>
-                
-          
-                <br>
-          
-                <!--<button type="submit" class="btn btn-success">Añadir Mascota</button>
-                <button type="miCuenta.HTML" action="miCuenta.HTML" class="btn btn-info">Quiero Adoptar</button>-->
-          
-          <button class="btn btn-primary btn-lg btn-block" type="submit" name="enviar" id="enviar" >Enviar</button>
-         
-      </form> <br>
-   
+                <input name="myMail" ng-model="myMail" type="email" class="form-control" id="inlineFormInput" placeholder="Mail"  required>
+                <span ng-show="myForm.myMail.$touched && myForm.myMail.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Mail"</span>
 
 
-</div></div></div>
+                <div class="form-group formcentrados">
+                  <select class="form-control" id="sel1">
+                      <option>Masculino</option>
+                      <option>Femenino</option>
+                  </select>
+                </div>
+          </div>
+          <br><br>
+          <div class="col-sm-12 formcentrados"><br><br>
+                <button type="submit" class="btn btn-success">Añadir Mascota</button>
+                <button type="miCuenta.HTML" action="miCuenta.HTML" class="btn btn-info">Quiero Adoptar</button>
+          </div>
+
+         </div>
+      </form> 
+  </div>
+</div>
+
+
     
     
 <!-- Modal -->
@@ -141,10 +126,10 @@
           <h4 class="modal-title">Inicia sesion en WiredPet</h4>
         </div>
         <div class="modal-body">
-            <form method="POST" action="../controladores/miCuenta/login.php">
+            <form action="miCuenta.HTML">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-      <input id="user" type="text" class="form-control" name="user" placeholder="Usuario">
+      <input id="email" type="text" class="form-control" name="email" placeholder="Email">
     </div>
     <br>
     <div class="input-group">
