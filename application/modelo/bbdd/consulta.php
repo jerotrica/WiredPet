@@ -2,8 +2,8 @@
 <?php
 //acceso a la tabla y devolucion de registros
 	
-	require("../../modelo/bbdd/conexion.php");//llamada al archivo que establece la conexion
-	echo "<br>hola soy consulta";
+	require("conexion.php");//llamada al archivo que establece la conexion
+	//echo "<br>hola soy consulta";
 	class Consulta extends Conexion{//hereda de la clase Conexion
 
 		 function __construct(){//constructor de la clase Consulta
@@ -35,9 +35,8 @@
 			//return $resultado;
 			
 
-			
-
 		}
+
 
 
 	}

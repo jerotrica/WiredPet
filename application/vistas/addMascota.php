@@ -1,5 +1,4 @@
-<?php   include '../helpers/sesion.php';?>
-
+<?php   include '../helper/sesion.php';?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/ico.ico">
+
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- Latest compiled and minified CSS -->
@@ -22,7 +22,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="js/subirPerfil.js" language="javascript" type="text/javascript"> </script> 
   <script src="js/funcion.js" language="javascript" type="text/javascript"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 
@@ -50,143 +49,85 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="index.php">WiredPet</a>
+      <a class="navbar-brand" href="miCuenta.php">WiredPet</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">  
       <ul class="nav navbar-nav navbar-right">
-        <li>      
-          <button type="button" class="btn btn-log btn-md" data-toggle="modal" data-target="#myModal">
-          <span class="glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModal"></span>
-          Inicia Sesion</button>
-        </li>
+        <li><a href="controlPanel.php"><span class="glyphicon glyphicon-cog"></span> Configurar</a></li>
+        <li><a href="../helper/sesionOut.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<br>
+<div class="col-center container text-center">   
+<div class="col-sm-6 col-sm-offset-3 well">
+<!--<div class="container-fluid">-->
 
-<div class="well">
-  <div class="container-fluid">
-    <h1 class="formcentrados">Agrega <small>a tu mascota </small></h1>
+  
+    <h2 class="formcentrados">Agrega <small>una mascota </small></h2>
     
-      <form action="index.php" name="myForm" class="form-inline">
-        <div class="row formcentrados">
+      <form  name="myForm" method="POST" action="../controladores/addMascota/proceso_addMascota.php" class="form-horizontal" enctype="multipart/form-data">
+        <div class="row formcentrados ">
+          
 
-          <div class="col-sm-12 formcentrados">
-
-             <a href="" class="imagenregistro"><img src="img/iconogato.png" id="imagen" class="img-rounded" height="100" width="100" alt="Avatar"></a>
-
-             <a href="" class="imagenregistro"><img src="img/iconoperro.png" id="imagen" class="img-rounded" height="100" width="100" alt="Avatar"></a>
-
-             <a href="" class="imagenregistro"><img src="img/iconopez.png" id="imagen" class="img-rounded" height="100" width="100" alt="Avatar"></a>
-
-             <a href="" class="imagenregistro"><img src="img/iconorata.png" id="imagen" class="img-rounded" height="100" width="100" alt="Avatar"></a>
-
-             <a href="" class="imagenregistro"><img src="img/iconootro.png" id="imagen" class="img-rounded" height="100" width="100" alt="Avatar"></a>
-             <br><br>
-          </div>  
-
-     <div class="col-sm-6 formderecho"> 
-
-      <input type="image" src="img/perfilvacio.png" alt="Submit" width=200px; height=200px;> 
-      </div>  
-    <div class="col-sm-6 formizquierdo"> 
-          <div class="col-sm-12 ">  
-
-                <div class="form-group formcentrados">
-                  <select class="form-control" id="sel1">
-                      <option>Labrador</option>
-                      <option>Boxer</option>
-                      <option>Pitbull</option>
-                      <option>Cocker</option>
-                      <option>Sarpei</option>
+                <input name="nombre" ng-model="nombre" type="text" class="form-control" id="inlineFormInput" placeholder="Nombre"  required>
+                <span ng-show="myForm.nombre.$touched && myForm.nombre.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Nombre"</span>
+                <br>
+                 <select class="form-control " id="sel1" name="tipo">
+                      <option value="vacio">Especie</option>
+                      <option value="perro">Perro</option>
+                      <option value="gato">Gato</option>
+                      <option value="roedor">Roedor</option>
+                      <option value="pez">Pez</option>
+                      <option value="otro">Otro</option>
                   </select>
-                </div>
 
-                <input name="myName" ng-model="myName" type="text" class="form-control" id="inlineFormInput" placeholder="Nombre"  required>
-                <span ng-show="myForm.myName.$touched && myForm.myName.$invalid" id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Falta "Nombre"</span>
-            
+                <br>
+                <input name="raza" ng-model="raza" type="text" class="form-control" id="inlineFormInput" placeholder="Raza"  required>
+                <br>
+                <select class="form-control " id="sel1" name="sizePet">
+                      <option value="vacio">Tamaño</option>
+                      <option value="chico">Chico</option>
+                      <option value="mediano">Mediano</option>
+                      <option value="grande">Grande</option>
+                  </select>
                 
-          </div>
-
-          <div class="col-sm-12 ">
-        
-                <div class="input-group mb-2 mr-sm-2 mb-sm-0 ">
-                <input name="myDate" ng-model="myDate" type="text" id="fecha" name="fecha" class="form-control" placeholder="Fecha de Nacimiento" required >
-                </div><span ng-show="myForm.myDate.$touched && myForm.myDate.$invalid"id="danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> </span> Falta "Fecha Nacimiento"</span>
-
-
-                <div class="form-group formcentrados">
-                  <select class="form-control" id="sel1">
-                      <option>Pequeño</option>
-                      <option>Mediano</option>
-                      <option>Grande</option>
+                
+                <br>
+          
+                <select class="form-control " id="sel1" name="sexoPet">
+                      <option value="vacio">Sexo</option>
+                      <option value="Hembra">Hembra</option>
+                      <option value="Macho">Macho</option>
+                      
                   </select>
-                </div>
+                
+                
+                <br>
+                
 
-          </div>
-
-          <div class="col-sm-12 ">
-
-                <div class="form-group formcentrados">
-                  <select class="form-control" id="sel1">
-                      <option>Masculino</option>
-                      <option>Femenino</option>
-                  </select>
-                </div>
-
-      </div>
-          </div>
-          <br><br>
-          <div class="col-sm-12 formcentrados"><br><br>
-                <button type="submit" class="btn btn-success">Añadir Mascota</button>
-                <button type="miCuenta.php" action="miCuenta.php" class="btn btn-info">Quiero Adoptar</button>
-          </div>
-
+                
+                <button type="button" class="btn btn-default btn-md btn-block" data-toggle="collapse" data-target="#demo">
+                <span class="glyphicon glyphicon-user"></span> Subir Foto De Perfil
+              </button> 
+                <div id="demo" class="collapse">
+              <input type="file" id="upload" name="perfil">
+              </div>
+                <br>
+               
+          
+          <button class="btn btn-primary btn-lg btn-block" type="submit" name="enviar" id="enviar" >Enviar</button>
          </div>
-      </form> 
-  </div>
-</div>
+      </form> <br>
+   
 
 
+</div></div>
     
     
-<!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
-          <h4 class="modal-title">Inicia sesion en WiredPet</h4>
-        </div>
-        <div class="modal-body">
-            <form action="miCuenta.php">
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-      <input id="email" type="text" class="form-control" name="email" placeholder="Email">
-    </div>
-    <br>
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-      <input id="password" type="password" class="form-control" name="password" placeholder="Password">
-    </div>
 
-    <br>
-      <button type="submit"  class="btn btn-success btn-block" >Iniciar sesion</button>
-    <br>
- 
-  </form>
-        </div>
-        <div class="modal-footer">
-          <p>Si no tienes una cuenta registrate <a href="registro.php">aqui</a></p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <!-- Modal -->
 
    
 <footer class=" text-center">

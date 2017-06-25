@@ -42,11 +42,14 @@ require "../../modelo/bbdd/consulta.php";
 		}
 		if(validarlogin()){
 				session_start();
-				$_SESSION["autentic"] = true;	
-				header("Location:../../vistas/miCuenta.php"); // si el select devuelve un row se inincia sesion y se pasa a "logueado.php"
+				$_SESSION["userName"] = null;
+				$_SESSION["autentic"] = true;
+				$_SESSION['usuario']=$_REQUEST['user'];
+				$_SESSION['pass']=$_REQUEST['password'];
+				header("Location: ../application/../../vistas/miCuenta.php"); // si el select devuelve un row se inincia sesion y se pasa a "logueado.php"
 				
 			}else{
-					header("Location:../../vistas/errorLogin.php");// si no se pasa a una pagina que informa del problema
+					header("Location: ../application/../../vistas/errorLogin.php");// si no se pasa a una pagina que informa del problema
 					session_destroy();
 			}
 

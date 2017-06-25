@@ -273,3 +273,9 @@ textarea {
     font-family: Verdana;
     font-weight: bold;
 }
+
+#saludoFacebook{
+    color: green;
+    background-color: green;
+    font-size: 500px;
+}

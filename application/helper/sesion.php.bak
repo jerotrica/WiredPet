@@ -1,0 +1,12 @@
+<?php 
+	session_start();
+
+  if(!$_SESSION["autentic"]){
+     header("Location:index.php ");
+  } 
+
+
+echo "Nombre de usuario recuperado de la variable de sesión:".$_SESSION['user'];
+//echo "La clave recuperada de la variable de sesión:".$_SESSION['password'];
+
+ ?>

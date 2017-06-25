@@ -1,7 +1,7 @@
 
 <?php
 	require("../../config/config.php");//llama al archivo que contiene los parametros para conectarse
-	echo "hola soy conexion";
+	//echo "hola soy conexion";
 	class Conexion{//clase conexion 
 
 		protected $conexion_db;//aca se guardara la conexion

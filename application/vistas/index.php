@@ -1,3 +1,16 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: fdaranno
+ * Date: 29/5/17
+ * Time: 20:59
+ */
+session_start();
+require_once  __DIR__ . '/../helper/facebookLogin/FacebookLogin.php';
+
+$facebookLogin = new FacebookLogin();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,7 +119,7 @@
                 <br>
                 <p>o utiliza una de estas opciones:</p>
                 <br>
-                <button type="button" class="btn btn-primary btn-block">Facebook</button>
+                <?php echo '<a href="' . $facebookLogin->getLoginUrl() . '"><button type="button" class="btn btn-primary btn-block">Facebook</button></a>';?>
                 <button type="button" class="btn btn-danger btn-block">Google+</button>
                 
         
@@ -115,6 +128,7 @@
 </div>
 </div>
 </div>
+
 <footer class=" text-center">
   <div class="caja-redes">
      <a href="https://twitter.com/" target="_blank" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>

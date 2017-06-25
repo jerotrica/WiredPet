@@ -52,7 +52,7 @@
 			echo "error";
 
 		}else{
-			header("location:/application/vistas/miCuenta.php");
+			header("location: /../../../vistas/miCuenta.php");
 			msqli_close($consulta->conexion_db);
 		}
 		?>

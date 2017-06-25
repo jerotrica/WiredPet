@@ -1,5 +1,7 @@
-<?php   include '../helpers/sesion.php';?>
-
+<?php   include '../helper/sesion.php';
+        include '../controladores/miCuenta/cargaPerfil.php';
+require_once  __DIR__ . '/../helper/facebookLogin/FacebookLogin.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,12 +56,14 @@
         <li><a href="citas.php">Citas</a></li>
         <li><a href="adoptar.php">Adoptar</a></li>
         <li><a href="futuraMama.php">Futura Mama</a></li>
+        <li><a href="addMascota.php">Agrega Una Mascota</a></li>
+        
       </ul>
 
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Configurar</a></li>
-        <li><a href="../helpers/sesionOut.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+        <li><a href="controlPanel.php"><span class="glyphicon glyphicon-cog"></span> Configurar</a></li>
+        <li><a href="../helper/sesionOut.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
       </ul>
 
     </div>
@@ -70,11 +74,11 @@
   <div class="row">
     <div class="col-sm-3 well">
       <div class="well">
-        <h2>Firulais</h2>
-        <img src="img/bird.jpg" id="imagen" class="img-rounded" height="165" width="165" alt="Avatar">
-        <p>Macho</p>
-        <p>Labrador</p>
-        <p>Mediano</p>
+        <h2><?php echo $nombrePerfil;?></h2>
+        <img src="<?php echo $fotoPerfil?>" id="imagen" class="img-rounded" height="165" width="165" alt="Avatar">
+        <p><?php echo $sexoPerfil?></p>
+        <p><?php echo $razaPerfil?></p>
+        <p><?php echo $sizePerfil?></p>
         
         
         
@@ -98,25 +102,44 @@
 
     </div>
     <div class="col-sm-7">
+    <div class="row">
+        <div class="col-sm-12" id="saludoFacebook">
+        <h4>Bienvenido </h4>
+        <?php echo "<h3 id='saludoFacebook' >" . $_SESSION['userName'] . "</h3>"; ?>
+        </div>
+        </div>
     
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-default text-left">
             <div class="panel-body">
               <!--<p contenteditable="true">Status: Feeling Blue</p>-->
-              <form>
+              <form method="POST" action="../controladores/miCuenta/proceso_post.php" id="formPost" enctype="multipart/form-data">
                   <div class="form-group">
                     <label  for="comment">Haz una publicacion</label>
-                      <textarea class="form-control" rows="5" id="comment"></textarea>
+                    
+                    <textarea class="form-control" rows="5" id="formPost" name="formPost"></textarea>
+
                   </div>
-              </form>
+              
               <div class="btn-group">
-              <button type="button" class="btn btn-default btn-sm">
+
+
+
+              <button type="button" class="btn btn-default btn-sm" data-toggle="collapse" data-target="#demo">
                 <span class="glyphicon glyphicon-picture"></span> Subir Archivo
               </button>   
-              <button type="button" class="btn btn-primary btn-sm">
+              
+              <button type="submit" class="btn btn-primary btn-sm">
                 <span class="glyphicon glyphicon-edit"></span> Publicar
-              </button> 
+              </button> </br></br>
+              
+              <div id="demo" class="collapse">
+              <input type="file" id="upload" name="archivo">
+              </div>
+              
+
+              </form>
               </div>  
             </div>
           </div>
@@ -138,7 +161,7 @@
           </div>
         </div>
       </div>
-      <div class="row ">
+     <!-- <div class="row ">
         <div class="col-sm-3 ">
           <div class="well">
            <p>Juancho</p>
@@ -185,15 +208,15 @@
           </div>
         </div>
       </div>     
-    </div>
-    <div class="col-sm-2 well">
+    </div>-->
+    <!--<div class="col-sm-2 well">
       <!--<div class="thumbnail">
         <p>Upcoming Events:</p>
         <img src="paris.jpg" alt="Paris" width="400" height="300">
         <p><strong>Paris</strong></p>
         <p>Fri. 27 November 2015</p>
         <button class="btn btn-primary">Info</button>
-      </div>      -->
+      </div>      
       <div class="well">
         <h1>ADS</h1>
       </div>
@@ -209,7 +232,7 @@
       <div class="well">
         <h1>ADS</h1>
       </div>
-    </div>
+    </div>-->
   </div>
 </div>
 

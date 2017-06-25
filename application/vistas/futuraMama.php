@@ -1,4 +1,4 @@
-<?php   include '../helpers/sesion.php';?>
+<?php   include '../helper/sesion.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +58,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Configurar</a></li>
-        <li><a href="../helpers/sesionOut.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+        <li><a href="../helper/sesionOut.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
       </ul>
 
     </div>
